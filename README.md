@@ -22,7 +22,7 @@ A real-time missing person detection system utilizing **InsightFace** for face r
 2. Install the required dependencies:
 
     ```bash
-    pip install flask opencv-python-headless insightface numpy
+    pip install -r requirements.txt
     ```
 
 3. Run the Flask app:
