@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing Person Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/home.svg') }}" alt="Home"></a>
+        </div>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('details') }}">Submit Details</a></li>
+            <li><a href="{{ url_for('find') }}">Find Missing Person</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="form-content">
+            <h1>Submit Missing Person Details</h1>
+            <form action="{{ url_for('details') }}" method="POST" enctype="multipart/form-data">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="phone">Phone Number:</label><br>
+                <input type="text" id="phone" name="phone" required><br>
+                <label for="photo">Photo:</label><br>
+                <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
